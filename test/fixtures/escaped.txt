@@ -1,0 +1,3 @@
+test_result.log:
+[1;31mFailure:[22m
+test_comments_generate_change_reports(ActivityStreamTest)[0m

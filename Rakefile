@@ -19,4 +19,12 @@ Rake::TestTask.new do |t|
   t.verbose = false
 end
 
+desc "Run tests against packaged binary"
+task "test:acceptance" => [:gem, :bin_path, :test]
+
+task "bin_path" => [:gem] do
+  path = pkg.package_dir_path
+  ENV["BIN_PATH"] = path + "/bin/boring"
+end
+
 task :default => :test

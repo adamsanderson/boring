@@ -6,7 +6,6 @@ require_relative '../lib/boring'
 # For testing IO:
 require 'stringio'
 
-
 class BoringTest < Minitest::Test
   def setup
     @boring = Boring.new
